@@ -37,21 +37,21 @@ void DIO_SetPinState(unsigned char port, int pin, unsigned char state){
     if(state == 'h'){
       PORTB = PORTB|(1<<pin); //pin is set to 1 for high
     }else if(state == 'l'){
-      PORTB = PORTB&!(1<<pin); //pin is cleared to 0 for low
+      PORTB &= ~(1<<pin); //pin is cleared to 0 for low
     }
   }
   if (port == 'd' & pin <= 7 & pin >= 0){ // pin must be from 0-7
     if(state == 'h'){
       PORTD = PORTD|(1<<pin); //pin is set to 1 for high
     }else if(state == 'l'){
-      PORTD = PORTD&!(1<<pin); //pin is cleared to 0 for low
+      PORTD &= ~(1<<pin); //pin is cleared to 0 for low
     }
   }
   if (port == 'c' & pin <= 7 & pin >= 0){ // pin must be from 0-7
     if(state == 'h'){
       PORTC = PORTC|(1<<pin); //pin is set to 1 for high
     }else if(state == 'l'){
-      PORTC = PORTC&!(1<<pin); //pin is cleared to 0 for low
+      PORTC &= ~(1<<pin); //pin is cleared to 0 for low
     }
   }
 }
