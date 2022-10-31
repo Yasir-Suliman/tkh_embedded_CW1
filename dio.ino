@@ -2,7 +2,22 @@
 #include <util/delay.h>
 
 void DIO_init(){
+ //set pins PB0 - PB2 as output
+  DIO_SetPinDirection('b', 0, 'o');
+  DIO_SetPinDirection('b', 1, 'o');
+  DIO_SetPinDirection('b', 2, 'o');
+  
+  //set pins PD4 - PD7 as output
+  DIO_SetPinDirection('d', 7, 'o');
+  DIO_SetPinDirection('d', 6, 'o');
+  DIO_SetPinDirection('d', 5, 'o');
+  DIO_SetPinDirection('d', 4, 'o');
+  DIO_SetPinDirection('d', 3, 'o');
 
+  // set pins PC3 - PC5 as input
+  DIO_SetPinDirection('c', 3, 'i');
+  DIO_SetPinDirection('c', 4, 'i');
+  DIO_SetPinDirection('c', 5, 'i');
 }
 
 // set Pin to INPUT or OUTput

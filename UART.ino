@@ -18,7 +18,7 @@ void init_uart(){
 void send_char_uart(char data){
   int empty = (UCSR0A & (1<<5));// returns 1 when empty and 0 when not empty
   while(!empty){
-    int empty = (UCSR0A & (1<<5));
+    empty = (UCSR0A & (1<<5));
   }
   UDR0 = data;
 }
