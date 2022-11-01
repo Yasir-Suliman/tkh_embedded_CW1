@@ -33,17 +33,17 @@ int main(){
       
       // led sequence
       DIO_SetPinState('b', 0, 'h');
-      _delay_ms(250);
+      _delay_ms(50);
       DIO_SetPinState('b', 1, 'h');
-      _delay_ms(250);
+      _delay_ms(50);
       DIO_SetPinState('b', 2, 'h');
-      _delay_ms(250);
+      _delay_ms(50);
       DIO_SetPinState('b', 2, 'l');
-      _delay_ms(250);
+      _delay_ms(50);
       DIO_SetPinState('b', 1, 'l');
-      _delay_ms(250);
+      _delay_ms(50);
       DIO_SetPinState('b', 0, 'l');
-      _delay_ms(250);      
+      _delay_ms(50);      
             
     } else{ // runs when button not pressed
       send_string_uart("BtnOFF");
@@ -120,9 +120,9 @@ int main(){
 
       // blinking ldr warning led
       DIO_SetPinState('d', 3, 'h');
-      _delay_ms(250);
+      _delay_ms(50);
       DIO_SetPinState('d', 3, 'l');
-      _delay_ms(250);    
+      _delay_ms(50);    
     } else{
       // sending ldr value      
       send_string_uart("LDR: ");
@@ -133,7 +133,7 @@ int main(){
       DIO_SetPinState('d', 3, 'l');
     }
     
-    _delay_ms(200); // delay for 200ms
+    _delay_ms(50); // delay for 100ms
   }
 }
 
